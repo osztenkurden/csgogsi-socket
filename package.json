@@ -1,0 +1,27 @@
+{
+  "name": "csgogsi-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc tsc/index.ts --outDir compiled --lib es2017 -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osztenkurden/csgogsi-socket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osztenkurden/csgogsi-socket/issues"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csgogsi": "^1.0.5",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/socket.io-client": "^1.4.32"
+  }
+}
