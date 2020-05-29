@@ -16,7 +16,7 @@
     "url": "https://github.com/osztenkurden/csgogsi-socket/issues"
   },
   "author": "",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "csgogsi": "^1.2.0",
     "socket.io-client": "^2.3.0"
