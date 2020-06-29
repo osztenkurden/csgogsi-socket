@@ -3,7 +3,7 @@ import CSGOGSI, { CSGORaw } from 'csgogsi';
 
 export default function gsisocket(ip: string, eventName: string): { GSI: CSGOGSI, socket: SocketIOClient.Socket } {
     const GSI = new CSGOGSI();
-    const socket = io.connect(ip, { transports: ["websocket", "polling"]});
+    const socket = io.connect(ip);
     socket.on(eventName, (data: CSGORaw) => {
         GSI.digest(data);
     });
