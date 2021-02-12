@@ -1,0 +1,9 @@
+.git
+.github
+__tests__
+tsc
+node_modules
+tsconfig.json
+jest.config.js
+README.md
+.gitignore
