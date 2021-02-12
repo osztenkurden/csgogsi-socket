@@ -3,7 +3,7 @@ import { Socket } from 'socket.io-client';
 import GSISocket from './../tsc';
 
 test("constructor > creates socket", () => {
-    const { GSI, socket } = GSISocket("http://localhost:1339/", "update");
+    const { socket } = GSISocket("http://localhost:1339/", "update");
 
     socket?.close();
 
