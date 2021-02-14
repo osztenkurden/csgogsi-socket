@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest --coverage",
     "make-badges": "istanbul-badges-readme",
-    "compile": "rm -rf ./compiled/ && tsc && mv ./compiled/index.js ./lib/ && mv ./compiled/index.d.ts ./types/ && npm run post-compile",
+    "compile": "rm -rf ./compiled/ && tsc && mv ./compiled/*.js ./lib/ && mv ./compiled/*.d.ts ./types/ && npm run post-compile",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc --write '**/*.ts'",
     "post-compile": "npm run prettier-format && npm run lint &&  npm test && npm run make-badges"
