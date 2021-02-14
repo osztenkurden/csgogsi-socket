@@ -1,10 +1,35 @@
-/// <reference types="socket.io-client" />
+import { Socket } from 'socket.io-client';
 import CSGOGSI from 'csgogsi';
 export default function gsisocket(
-	ip: string,
+	address: string,
 	eventName: string
 ): {
 	GSI: CSGOGSI;
-	socket: SocketIOClient.Socket;
+	socket: Socket;
 };
-export * from 'csgogsi';
+export {
+	CSGO,
+	CSGORaw,
+	Side,
+	RoundOutcome,
+	WeaponRaw,
+	TeamRaw,
+	PlayerRaw,
+	PlayersRaw,
+	Provider,
+	MapRaw,
+	RoundRaw,
+	BombRaw,
+	PhaseRaw,
+	Events,
+	Team,
+	Player,
+	Bomb,
+	Map,
+	Round,
+	Score,
+	KillEvent,
+	RawKill,
+	TeamExtension,
+	PlayerExtension
+} from 'csgogsi';

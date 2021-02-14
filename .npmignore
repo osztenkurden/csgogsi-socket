@@ -7,3 +7,4 @@ tsconfig.json
 jest.config.js
 README.md
 .gitignore
+coverage

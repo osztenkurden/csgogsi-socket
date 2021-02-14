@@ -5,11 +5,12 @@
   "main": "./lib/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "compile": "tsc tsc/index.ts --outDir compiled --lib es2017 -d && npm run post-compile",
+    "test": "jest --coverage",
+    "make-badges": "istanbul-badges-readme",
+    "compile": "rm -rf ./compiled/ && tsc && mv ./compiled/index.js ./lib/ && mv ./compiled/index.d.ts ./types/ && npm run post-compile",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc --write '**/*.ts'",
-    "post-compile": "npm run prettier-format && npm run lint"
+    "post-compile": "npm run prettier-format && npm run lint &&  npm test && npm run make-badges"
   },
   "repository": {
     "type": "git",
@@ -22,16 +23,17 @@
   "license": "MIT",
   "dependencies": {
     "csgogsi": "^1.3.3",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^3.1.1"
   },
   "devDependencies": {
     "@types/node": "^12.11.6",
-    "@types/socket.io-client": "^1.4.32",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "eslint": "^7.19.0",
+    "istanbul-badges-readme": "^1.2.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "socket.io": "^3.1.1",
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5"
   }
