@@ -1,4 +1,4 @@
-import { CSGORaw, RawKill } from '../../tsc';
+import { CSGORaw } from '../../tsc';
 
 export const createGSIPacket = () => {
 	const base = {

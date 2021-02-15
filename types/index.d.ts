@@ -1,12 +1,12 @@
-import { Socket } from 'socket.io-client';
 import CSGOGSI from 'csgogsi';
-export default function gsisocket(
+declare const GSISocket: (
 	address: string,
 	eventName: string
-): {
+) => {
 	GSI: CSGOGSI;
-	socket: Socket;
+	socket: import('socket.io-client').Socket;
 };
+export default GSISocket;
 export {
 	CSGO,
 	CSGORaw,

@@ -1,8 +1,8 @@
-import { io, Socket } from 'socket.io-client';
+import { io } from 'socket.io-client';
 import CSGOGSI, { CSGORaw } from 'csgogsi';
 import assert from 'assert';
 
-export default function gsisocket(address: string, eventName: string): { GSI: CSGOGSI; socket: Socket } {
+const GSISocket = (address: string, eventName: string) => {
 	assert(address && typeof address === 'string');
 	assert(eventName && typeof eventName === 'string');
 
@@ -12,7 +12,9 @@ export default function gsisocket(address: string, eventName: string): { GSI: CS
 		GSI.digest(data);
 	});
 	return { GSI, socket };
-}
+};
+
+export default GSISocket;
 
 export {
 	CSGO,
