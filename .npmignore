@@ -9,6 +9,6 @@ __tests__
 tsc
 node_modules
 tsconfig.json
-jest.config.js
-README.md
+tsconfig.esm.json
+jest.config.ts
 coverage
