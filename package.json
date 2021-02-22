@@ -1,12 +1,26 @@
 {
   "name": "csgogsi-socket",
-  "version": "1.3.3",
+  "version": "2.0.0",
   "description": "",
-  "main": "./lib/index.js",
+  "type": "module",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "types": "./types/index.d.ts",
+  "exports": {
+    "import": "./lib/esm/index.js",
+    "default": "./lib/cjs/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc tsc/index.ts --outDir compiled --lib es2017 -d"
+    "test": "jest --coverage --detectOpenHandles",
+    "make-badges": "istanbul-badges-readme",
+    "move-build": "mv lib/cjs/*.d.ts types/",
+    "transpile:cjs": "tsc -p tsconfig.json",
+    "transpile:esm": "tsc -p tsconfig.esm.json",
+    "transpile:all": "npm run transpile:cjs && npm run transpile:esm",
+    "transpile": "npm run transpile:all && npm run post-compile && npm run move-build",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "prettier --config .prettierrc --write **/*.ts",
+    "post-compile": "npm run prettier-format && npm run lint &&  npm test && npm run make-badges"
   },
   "repository": {
     "type": "git",
@@ -18,11 +32,21 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "csgogsi": "^1.3.3",
-    "socket.io-client": "^2.3.0"
+    "csgogsi": "^2.0.0",
+    "socket.io-client": "^3.1.1"
   },
   "devDependencies": {
-    "@types/node": "^12.11.6",
-    "@types/socket.io-client": "^1.4.32"
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "istanbul-badges-readme": "^1.2.0",
+    "jest": "^26.6.3",
+    "jest-ts-webcompat-resolver": "^1.0.0",
+    "prettier": "^2.2.1",
+    "socket.io": "^3.1.1",
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
   }
 }
