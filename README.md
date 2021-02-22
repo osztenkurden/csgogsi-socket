@@ -10,14 +10,10 @@
 It's kind of overlay for github.com/osztenkurden/csgogsi package - if you want to connect this package to socket.io server, this will make your life easier, for example - during creation of the HUD. Additionaly, it returnes all types of CSGOGSI package.
 
 ## Installing
-### For Node and React
 ```npm install csgogsi-socket```
 
-### For Browser
 
-Not for now
-
-## Example #1
+## Example
 ```javascript
 import GSISocket from 'csgogsi-socket';
 
