@@ -29,4 +29,4 @@ GSI.on('bombPlant', player => {
 
 GSISocket() function takes two arguments - first, address of socket.io server, and second - name of the event that gives the raw CSGO GSI data.
 
-It returns a CSOGSI object, so all methods from github.com/osztenkurden/csgogsi documentation will apply.
+It returns socket and CSOGSI object (and all interfaces from CSGOGSI), so all methods from github.com/osztenkurden/csgogsi documentation will apply.
