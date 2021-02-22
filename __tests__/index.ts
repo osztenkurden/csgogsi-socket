@@ -1,4 +1,4 @@
-import CSGOGSI from 'csgogsi';
+import { CSGOGSI } from 'csgogsi';
 import { Server } from 'socket.io';
 import http from 'http';
 import GSISocket from './../tsc';
@@ -35,7 +35,7 @@ test('constructor > connects to socket.io', async () => {
 
 	socket.on('connect', callback);
 
-	await wait(50);
+	await wait(150);
 
 	expect(callback.mock.calls.length).toBe(1);
 	expect(socket.connected).toBe(true);
@@ -56,7 +56,7 @@ test('constructor > gets data incoming', async () => {
 
 	// Hubercik kocha Beatkę <3 <3 <3;
 
-	await wait(50);
+	await wait(150);
 
 	expect(GSICallback.mock.calls.length).toBe(1);
 

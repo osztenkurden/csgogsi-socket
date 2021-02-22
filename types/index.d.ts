@@ -1,4 +1,4 @@
-import CSGOGSI from 'csgogsi';
+import { CSGOGSI } from 'csgogsi';
 declare const GSISocket: (
 	address: string,
 	eventName: string
@@ -12,9 +12,11 @@ export {
 	CSGORaw,
 	Side,
 	RoundOutcome,
+	WeaponType,
 	WeaponRaw,
 	TeamRaw,
 	PlayerRaw,
+	PlayerObservedRaw,
 	PlayersRaw,
 	Provider,
 	MapRaw,
@@ -31,5 +33,6 @@ export {
 	KillEvent,
 	RawKill,
 	TeamExtension,
-	PlayerExtension
+	PlayerExtension,
+	Orientation
 } from 'csgogsi';

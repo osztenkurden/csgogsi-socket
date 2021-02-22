@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-import CSGOGSI, { CSGORaw } from 'csgogsi';
+import { CSGOGSI, CSGORaw } from 'csgogsi';
 import assert from 'assert';
 
 const GSISocket = (address: string, eventName: string) => {
@@ -21,11 +21,11 @@ export {
 	CSGORaw,
 	Side,
 	RoundOutcome,
-	//WeaponType,
+	WeaponType,
 	WeaponRaw,
 	TeamRaw,
 	PlayerRaw,
-	//PlayerObservedRaw,
+	PlayerObservedRaw,
 	PlayersRaw,
 	Provider,
 	MapRaw,
@@ -42,5 +42,6 @@ export {
 	KillEvent,
 	RawKill,
 	TeamExtension,
-	PlayerExtension //Orientation
+	PlayerExtension,
+	Orientation
 } from 'csgogsi';
