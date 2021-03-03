@@ -11,6 +11,7 @@ export {
 	CSGO,
 	CSGORaw,
 	Side,
+	CSGOGSI,
 	RoundOutcome,
 	WeaponType,
 	WeaponRaw,
