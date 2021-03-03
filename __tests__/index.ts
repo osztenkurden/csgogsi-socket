@@ -1,7 +1,7 @@
 import { CSGOGSI } from 'csgogsi';
 import { Server } from 'socket.io';
 import http from 'http';
-import GSISocket from './../tsc';
+import { GSISocket } from './../tsc';
 import { createGSIPacket } from './data';
 
 let io: Server;

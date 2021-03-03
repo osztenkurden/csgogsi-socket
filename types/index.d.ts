@@ -6,7 +6,7 @@ declare const GSISocket: (
 	GSI: CSGOGSI;
 	socket: import('socket.io-client').Socket;
 };
-export default GSISocket;
+export { GSISocket };
 export {
 	CSGO,
 	CSGORaw,

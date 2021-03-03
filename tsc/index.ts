@@ -14,7 +14,7 @@ const GSISocket = (address: string, eventName: string) => {
 	return { GSI, socket };
 };
 
-export default GSISocket;
+export { GSISocket };
 
 export {
 	CSGO,
