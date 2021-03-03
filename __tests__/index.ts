@@ -16,12 +16,6 @@ beforeAll(done => {
 	httpServer.listen(3000, done);
 });
 
-afterAll(done => {
-	io.close();
-	httpServer.close();
-	done();
-});
-
 test('constructor > creates socket', () => {
 	const { socket } = GSISocket('http://localhost:1339/', 'update');
 
@@ -35,7 +29,7 @@ test('constructor > connects to socket.io', async () => {
 
 	socket.on('connect', callback);
 
-	await wait(150);
+	await wait(450);
 
 	expect(callback.mock.calls.length).toBe(1);
 	expect(socket.connected).toBe(true);
@@ -117,3 +111,9 @@ test('constructor > throws on non-string address #5', () => {
 	};
 	expect(createWIthNoAddress).toThrow();
 });
+
+afterAll(done => {
+	io.close();
+	httpServer.close(done);
+});
+
