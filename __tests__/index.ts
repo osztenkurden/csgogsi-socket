@@ -114,6 +114,8 @@ test('constructor > throws on non-string address #5', () => {
 
 afterAll(done => {
 	io.close();
-	httpServer.close(done);
+	httpServer.close();
+	done();
 });
+
 
