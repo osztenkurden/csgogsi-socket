@@ -4,7 +4,10 @@ declare const GSISocket: (
 	eventName: string
 ) => {
 	GSI: CSGOGSI;
-	socket: import('socket.io-client').Socket;
+	socket: import('socket.io-client').Socket<
+		import('socket.io-client/build/typed-events').DefaultEventsMap,
+		import('socket.io-client/build/typed-events').DefaultEventsMap
+	>;
 };
 export { GSISocket };
 export {
