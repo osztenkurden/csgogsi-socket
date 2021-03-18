@@ -15,7 +15,7 @@ It's kind of overlay for github.com/osztenkurden/csgogsi package - if you want t
 
 ## Example
 ```javascript
-import GSISocket from 'csgogsi-socket';
+import { GSISocket } from 'csgogsi-socket';
 
 const GSI = GSISocket('localhost:1337', 'update');
 
