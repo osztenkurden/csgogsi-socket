@@ -13,7 +13,7 @@ beforeAll(done => {
 	httpServer = http.createServer();
 	io = new Server(httpServer);
 
-	httpServer.listen(3000, done);
+	httpServer.listen(3178, done);
 });
 
 test('constructor > creates socket', () => {
@@ -25,7 +25,7 @@ test('constructor > creates socket', () => {
 
 test('constructor > connects to socket.io', async () => {
 	const callback = jest.fn(() => {});
-	const { socket } = GSISocket('http://localhost:3000/', 'update');
+	const { socket } = GSISocket('http://localhost:3178/', 'update');
 
 	socket.on('connect', callback);
 
@@ -42,7 +42,7 @@ test('constructor > gets data incoming', async () => {
 	const callback = () => {
 		io.emit('update', createGSIPacket());
 	};
-	const { GSI, socket } = GSISocket('http://localhost:3000/', 'update');
+	const { GSI, socket } = GSISocket('http://localhost:3178/', 'update');
 
 	GSI.on('data', GSICallback);
 
