@@ -44,5 +44,7 @@ export {
 	RawKill,
 	TeamExtension,
 	PlayerExtension,
-	Orientation
+	Orientation,
+	mapSteamIDToPlayer,
+	parseTeam
 } from 'csgogsi';
