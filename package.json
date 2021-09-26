@@ -1,6 +1,6 @@
 {
   "name": "csgogsi-socket",
-  "version": "2.3.3",
+  "version": "2.3.5",
   "description": "",
   "type": "module",
   "main": "./lib/cjs/index.js",
@@ -32,7 +32,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "csgogsi": "^2.3.3",
+    "csgogsi": "^2.3.5",
     "socket.io-client": "^4.0.0"
   },
   "devDependencies": {
