@@ -45,5 +45,6 @@ export {
 	PlayerExtension,
 	Orientation,
 	mapSteamIDToPlayer,
-	parseTeam
+	parseTeam,
+	RoundDamage
 } from 'csgogsi';

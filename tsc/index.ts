@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-import { CSGOGSI, CSGORaw } from 'csgogsi';
+import { CSGOGSI, CSGORaw, RoundDamage } from 'csgogsi';
 import assert from 'assert';
 
 const GSISocket = (address: string, eventName: string) => {
@@ -8,7 +8,10 @@ const GSISocket = (address: string, eventName: string) => {
 
 	const GSI = new CSGOGSI();
 	const socket = io(address);
-	socket.on(eventName, (data: CSGORaw) => {
+	socket.on(eventName, (data: CSGORaw, damage?: RoundDamage[]) => {
+		if (damage) {
+			GSI.damage = damage;
+		}
 		GSI.digest(data);
 	});
 	return { GSI, socket };
@@ -51,5 +54,6 @@ export {
 	PlayerExtension,
 	Orientation,
 	mapSteamIDToPlayer,
-	parseTeam
+	parseTeam,
+	RoundDamage
 } from 'csgogsi';
