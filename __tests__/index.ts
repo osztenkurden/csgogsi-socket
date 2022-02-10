@@ -72,6 +72,21 @@ test('constructor > throws on missing address', () => {
 	expect(createWIthNoAddress).toThrow();
 });
 
+test('constructor > throws on missing event name', () => {
+	const createWIthNoAddress = () => {
+		GSISocket('address', '');
+	};
+	expect(createWIthNoAddress).toThrow();
+});
+
+test('constructor > throws on non-string event name', () => {
+	const createWIthNoAddress = () => {
+		const event: any = 123;
+		GSISocket('address', event);
+	};
+	expect(createWIthNoAddress).toThrow();
+});
+
 test('constructor > throws on non-string address #1', () => {
 	const createWIthNoAddress = () => {
 		const address: any = 123;

@@ -1,10 +1,9 @@
 import { io } from 'socket.io-client';
 import { CSGOGSI, CSGORaw, RoundDamage } from 'csgogsi';
-import assert from 'assert';
 
 const GSISocket = (address: string, eventName: string) => {
-	assert(address && typeof address === 'string');
-	assert(eventName && typeof eventName === 'string');
+	if (!address || typeof address !== 'string') throw new Error('Missing address');
+	if (!eventName || typeof eventName !== 'string') throw new Error('Missing target event name');
 
 	const GSI = new CSGOGSI();
 	const socket = io(address);

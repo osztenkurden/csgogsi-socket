@@ -1,4 +1,4 @@
-![Statements](https://img.shields.io/badge/Coverage-94.44%25-brightgreen.svg)
+![Statements](https://img.shields.io/badge/Coverage-94.74%25-brightgreen.svg)
 ![CI](https://img.shields.io/github/workflow/status/osztenkurden/csgogsi-socket/CI)
 ![Dependencies](https://img.shields.io/david/osztenkurden/csgogsi-socket)
 ![Downloads](https://img.shields.io/npm/dm/csgogsi-socket)
